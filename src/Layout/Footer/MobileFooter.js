@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { BsCollectionPlay } from "react-icons/bs";
-import { FiHeart, FiUserCheck, FiPhone } from "react-icons/fi";
+import { FiUserCheck, FiPhone } from "react-icons/fi";
 import { HiOutlineHome } from "react-icons/hi";
+import { FaHeart } from "react-icons/fa";
+import { useFavorites } from "../../context/favoriteContext";
 
 function MobileFooter() {
   const active = "text-main";
@@ -11,6 +13,8 @@ function MobileFooter() {
 
   const Hover = ({ isActive }) =>
     isActive ? `${active} ${inActive}` : inActive;
+
+  const { favorites } = useFavorites();
   return (
     <>
       <div className="flex flex-btn h-full bg-white rounded cursor-pointer overflow-y-scroll flex-grow w-full"></div>
@@ -21,13 +25,13 @@ function MobileFooter() {
             <BsCollectionPlay />
           </NavLink>
 
-          <NavLink to="/favorite" className={Hover}>
-            <div className="relative">
-              <div className="w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-2 -right-2">
-                4
+          <NavLink to="/favorite" className={`${Hover} relative`}>
+            <FaHeart className="w-6 h-6" />
+            {favorites.length > 0 && (
+              <div className="w-4 h-4 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-2 -right-2">
+                {favorites.length}
               </div>
-              <FiHeart />
-            </div>
+            )}
           </NavLink>
           <NavLink to="/" className={Hover}>
             <HiOutlineHome />
