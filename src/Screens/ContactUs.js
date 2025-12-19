@@ -22,7 +22,7 @@ const ContactUs = () => {
     {
       id: 3,
       title: "Location",
-      info: "Ilorin, Kwara, Nigeria.",
+      info: "Lagos, Nigeria.",
       icon: FiMapPin,
       contact: "",
     },

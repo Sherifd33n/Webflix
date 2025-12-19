@@ -97,15 +97,15 @@ function Footer() {
           <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
             <Link to="/">
               <img
-                src="/images/netflix-logo.png"
+                src="/images/webflix.png"
                 alt="logo"
                 className=" object-contain  h-12"
               />
             </Link>
             <p className="leading-7 text-sm text-border mt-3">
               <span>
-                Unilorin Road, Ilorin <br />
-                Kwara State
+                Ikeja, <br />
+                Lagos State.
               </span>
               <br />
               <span>Tell: +234 000 000 0000</span>

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import logo from "../../src/assets/netflix-logo.png";
+import webflix from "../../src/assets/webflix.png";
 import { Input } from "../Components/UsedInput";
 import { Link } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
@@ -10,7 +10,7 @@ const Register = () => {
     <Layout>
       <div className="container mx-auto px-2 my-24 flex-colo">
         <div className="w-full gap-3 flex-colo p-12 md:w-3/5 bg-dry rounded-lg border border-border">
-          <img src={logo} alt="logo" className="w-full h-16 object-contain" />
+          <img src={webflix} alt="logo" className="w-full h-16 object-contain" />
           <Input
             label="FullName"
             placeholder="John Doe"
